@@ -2,21 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Electric Car Shop</title>
+    <title>Electric Car</title>
   </head>
   <body>
     <header class="header">
-      <h1>header</h1>
-      <!-- <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav> -->
+      <div class="menu">
+        <h1><i class="fas fa-car-alt"></i> Electric Cars</h1>
+        <i class="fas fa-bars menu-icon"></i>
+        <nav class="navegacion">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+    <section class="filtro">
+      <div class="content">
+        <p>Ordenar por :</p>
+        <select title="filtro" name="cars" id="cars">
+          <option value="todos">Todos</option>
+          <option value="marca">Marca</option>
+          <option value="Precio">Precio</option>
+          <option value="Año">Año</option>
+          <option value="Cilindrada">Cilindrada</option>
+        </select>
+      </div>
+    </section>
     <main class="main">
       <h1>main</h1>
       <!-- <section class="hero">
@@ -51,6 +70,11 @@
       </section> -->
     </main>
     <footer class="footer">
+      <div class="icon-media">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+
       <p>&copy; 2024 Electric Car Shop</p>
     </footer>
   </body>
