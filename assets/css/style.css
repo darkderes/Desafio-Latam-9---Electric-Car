@@ -41,23 +41,27 @@ h1 {
   width: 100%;
   padding: 0 20px;
 }
+
+
 .filtro {
   grid-area: filtro;
   background-color: #c0bec0;
+}
+
+.content {
+  width: 90%; /* Ajusta el ancho del contenido dentro del filtro */
+  margin: 10px auto; /* Centra el contenido */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+
 }
-.content {
-  flex-direction: column;
-  width: 100%;
-  margin: 20px;
-}
+
 select {
+  width: 100%; /* Ajusta el select para ocupar el ancho disponible */
   margin-top: 10px;
   padding: 10px;
-  width: 100%;
   border-radius: 15px;
 }
 footer p {
@@ -65,29 +69,67 @@ footer p {
   text-align: center;
   margin-top: 20px;
 }
-.featured-products {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-.products {
-  display: flex;
-  flex-direction: row;
-}
-img {
-  width: 350px;
-  height: 350px;
-  object-fit: fill;
-  margin: 0 10px;
-}
-
 .main {
   grid-area: main;
   background-color: rgb(252, 252, 252);
   overflow-x: auto;
   align-items: center;
+  justify-content: center;
 }
+.featured-products {
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.products {
+  display: flex;
+  padding: 0 10px;
+  gap: 20px; /* Espacio entre los productos */
+  overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
+}
+
+.product {
+  border: #c0bec0 1px solid;
+  padding: 10px;
+  flex: 0 0 auto; /* Hace que cada producto mantenga su ancho individual */
+  margin: 0 auto; /* Centra los productos en la columna */
+}
+
+img {
+  width: 300px; /* Ajusta el ancho de la imagen al contenedor */
+  height: 300px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: #333;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin: 0 4px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+}
+
+.pagination a.active {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+}
+
 
 .footer {
   grid-area: footer;
@@ -111,23 +153,13 @@ img {
     grid-template-rows: 100px calc(100vh - 100px - 100px) 100px;
     grid-template-columns: 250px calc(100vw - 250px);
   }
-  .filtro {
-    display: block;
-    justify-content: start;
-    align-items: center;
-    text-align: center;
-  }
-  .content {
-    width: 90%;
-    margin: 10px;
-  }
+
   .navegacion {
     margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    /* display: ; */
   }
   ul {
     display: flex;
@@ -154,20 +186,25 @@ img {
   .menu-icon {
     display: none;
   }
-  main {
+  .main {
     grid-area: main;
     background-color: rgb(252, 252, 252);
     align-items: center;
+    padding: 10px;
   }
   .featured-products {
-    width: 100%;
+    /* width: 100%; */
     display: block;
+    margin: 0 10px;
   }
   .products {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 10px;
     overflow-y: scrolls;
+  }
+  .product {
+    border: #c0bec0 1px solid;
   }
   img {
     width: 200px;
@@ -189,10 +226,6 @@ img {
   }
   h1 {
     font-size: 50px;
-  }
-  .content {
-    width: 98%;
-    margin: 20px;
   }
 
   .navegacion {
@@ -226,23 +259,33 @@ img {
   .menu-icon {
     display: none;
   }
-  main {
+  .main {
     grid-area: main;
     background-color: rgb(252, 252, 252);
     align-items: center;
+    padding: 10px;
   }
   .featured-products {
     width: 100%;
     display: block;
   }
   .products {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
-    overflow-y: scrolls;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a una nueva línea */
+    gap: 20px; /* Espacio entre productos */
+    justify-content: space-evenly; /* Distribuye los productos equitativamente */
   }
+
+  .product {
+    flex: 1 1 200px; /* Tamaño flexible, con un ancho mínimo de 200px */
+    max-width: 300px; /* Limita el ancho máximo de cada producto */
+    border: #c0bec0 1px solid;
+    text-align: center;
+    padding: 10px;
+  }
+
   img {
-    width: 300px;
-    height: 300px;
+    width: 100%; /* Ajusta el ancho de la imagen al ancho del producto */
+    height: auto;
   }
 }
