@@ -42,7 +42,6 @@ h1 {
   padding: 0 20px;
 }
 
-
 .filtro {
   grid-area: filtro;
   background-color: #c0bec0;
@@ -55,7 +54,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 select {
@@ -77,12 +75,12 @@ footer p {
   justify-content: center;
 }
 .featured-products {
-  /* height: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  width: 100%;
+  height: 90%;
 }
 .products {
   display: flex;
@@ -106,16 +104,15 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
-  margin-top: 20px;
+  padding: 5px 0;
 }
 
 .pagination a {
   color: #333;
-  padding: 8px 16px;
+  padding: 0px 8px;
   text-decoration: none;
   transition: background-color 0.3s;
-  margin: 0 4px;
+  margin: 8px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
@@ -129,7 +126,6 @@ img {
   color: white;
   border: 1px solid #333;
 }
-
 
 .footer {
   grid-area: footer;
@@ -159,7 +155,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
   ul {
     display: flex;
@@ -193,16 +188,16 @@ img {
     padding: 10px;
   }
   .featured-products {
-    /* width: 100%; */
     display: block;
     margin: 0 10px;
   }
   .products {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    overflow-y: scrolls;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a una nueva línea */
+    gap: 20px; /* Espacio entre productos */
+    justify-content: space-evenly; /* Distribuye los productos equitativamente */
   }
+
   .product {
     border: #c0bec0 1px solid;
   }
@@ -210,6 +205,12 @@ img {
     width: 200px;
     height: 200px;
   }
+  /* .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+  } */
 }
 
 @media (width >= 992px) {
